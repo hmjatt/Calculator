@@ -18,7 +18,7 @@ Thanks to The Odin Project for putting awesome curriculum for people like me to 
 
 > If you have read this far == > 
 
-     Computer Science major walks into an English class
+    Computer Science major walks into an English class
     The Professor says "Welcome to English 101".
 
     The student panicks.
@@ -27,4 +27,4 @@ Thanks to The Odin Project for putting awesome curriculum for people like me to 
 
     "I missed the first 4 English classes".
 >  	
->  	 	 	:slightly_smiling_face:
+> :joy: :ghost:
