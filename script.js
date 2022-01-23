@@ -11,7 +11,6 @@ let argNumber;
 let opr
 let splitUsingOp;
 let joinNums;
-let sum;
 
 
 
@@ -46,7 +45,7 @@ operator.forEach(function(op) {
 
 
         screen.innerHTML = nums.join("")
-        console.log(nums, opr);
+        // console.log(nums, opr);
     });
 });
 
@@ -55,7 +54,7 @@ equals.addEventListener("click", function calculates() {
        splitUsingOp = joinNums.split(opr);
        operate();
 
-    //    console.log(splitUsingOp[0], opr);
+    //    console.log(splitUsingOp, opr);
 });
 
 
@@ -72,12 +71,7 @@ clear.forEach(function(clears) {
     });
 });
 
-const add = function(a, b) {
-    return a + b;
-};
 
-
-// console.log("add:" + add(2, 4));
 
 
 
@@ -91,16 +85,14 @@ function operate(operator, num1, num2) {
     
     switch (operator) {
         case "+":
-            sum = (add(num1, num2));
-        
+            let sum = (sums(splitUsingOp));
             screen.innerHTML = "";
             screen.innerHTML = sum;
             nums = [];
             nums[0] = sum;
-            console.log(nums);
             return sum;
         case "-":
-            sub = subtract(num1, num2);
+            let sub = subtract(splitUsingOp);
             screen.innerHTML = "";
             screen.innerHTML = sub;
             nums = [];
@@ -109,15 +101,10 @@ function operate(operator, num1, num2) {
             return sub;
       }
 
-    // if(operator == "+"){
-        
-    
-    // }
 
 
 }
 
-// console.log(operate("+", 4, 4));
 
 
 
@@ -131,11 +118,22 @@ function operate(operator, num1, num2) {
 
 
 
-const subtract = function(a, b) {
-    return a - b;
-};
 
-console.log("subtract:" + subtract(4, 2));
+const subtract = function(subArgs) {
+
+    
+      if(subArgs.length == 0) {
+          sub = 0;
+      } else {
+        sub = subArgs.reduce((prev, next) => {
+            console.log(prev, next);
+          return parseInt(prev) - parseInt(next);
+        });
+      }
+    
+        return sub;
+    };
+
 
 const sums = function(sumArgs) {
 
@@ -145,7 +143,7 @@ const sums = function(sumArgs) {
       sum = 0;
   } else {
     sum = sumArgs.reduce((prev, next) => {
-      return prev + next;
+      return parseInt(prev) + parseInt(next);
     });
   }
 
