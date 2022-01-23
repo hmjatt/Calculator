@@ -17,7 +17,8 @@ Thanks to The Odin Project for putting awesome curriculum for people like me to 
 * GitHub an awesome code sharing platform
 
 > If you have read this far == > 
->   Computer Science major walks into an English class
+
+     Computer Science major walks into an English class
     The Professor says "Welcome to English 101".
 
     The student panicks.
