@@ -14,6 +14,7 @@ let joinNums;
 let sum;
 
 
+
 numbers.forEach(function(elem) {
     elem.addEventListener("click", function populate() {
       
@@ -45,7 +46,7 @@ operator.forEach(function(op) {
 
 
         screen.innerHTML = nums.join("")
-        // console.log(joinNums, opr);
+        console.log(nums, opr);
     });
 });
 
@@ -88,15 +89,30 @@ function operate(operator, num1, num2) {
     num2 = parseInt(splitUsingOp[1]);
 
     
+    switch (operator) {
+        case "+":
+            sum = (add(num1, num2));
+        
+            screen.innerHTML = "";
+            screen.innerHTML = sum;
+            nums = [];
+            nums[0] = sum;
+            console.log(nums);
+            return sum;
+        case "-":
+            sub = subtract(num1, num2);
+            screen.innerHTML = "";
+            screen.innerHTML = sub;
+            nums = [];
+            nums[0] = sub;
+            console.log(sub);
+            return sub;
+      }
 
-    if(operator == "+"){
-        sum = (add(num1, num2));
-        console.log(sum);
-        screen.innerHTML = "";
-        screen.innerHTML = sum;
-        return sum;
+    // if(operator == "+"){
+        
     
-    }
+    // }
 
 
 }
