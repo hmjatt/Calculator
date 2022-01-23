@@ -2,30 +2,37 @@
 body {
     display: flex;
     justify-content: center;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #calculator-div {
     display: flex;
     flex-direction: column;
     background-color: rgb(10, 10, 10);
+    color: rgb(235, 235, 235);
+    font-size: 56px;
     border-radius: 34px;
     height: 700px;
     width: 500px;
+    padding-top: 20px;
 }
 
 #screen-div {
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
     align-self: center;
     background-color: rgb(32, 32, 22);
     border-radius: 34px;
-    margin: 1em;
     height: 200px;
-    width: 480px;
+    width: 460px;
 }
 
 #buttons-div-container {
 
     display: flex;
     justify-content: center;
+    padding-top: 25px;
 }
 
 #buttons-div {
@@ -38,9 +45,9 @@ body {
 }
 
 button {
+    font-family: 'Open Sans', sans-serif;
     align-self: center;
     font-size: 42px;
-    font-family: 'Open Sans', sans-serif;
     font-weight: 500;
     border: none;
     margin-left: 0.5em;
