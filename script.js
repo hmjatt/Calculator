@@ -3,7 +3,7 @@ const screen = document.getElementById("screen-div");
 const operator = document.querySelectorAll(".operator");
 const equals = document.getElementById("equals");
 const clear = document.getElementById("clear");
-const backspace = document.getElementById("backspace");
+const back = document.getElementById("back");
 const parenthasisLeft = document.getElementById("paren-left");
 const parenthasisRight = document.getElementById("paren-right");
 const dot = document.getElementById("dot");
@@ -26,6 +26,27 @@ numbers.forEach(function(elem) {
 
 });
 
+//keyboard Support
+document.addEventListener('keyup', function enterDigit(e) {
+
+
+
+    
+        if(e.key == "Backspace") {
+            let oldItems = screen.innerHTML;
+            const editedItems = oldItems.slice(0, -1)
+            screen.innerHTML = editedItems;
+        }else if(e.key == "Shift"||e.key == "CapsLock"||e.key == "Control") {
+            e.preventDefault();
+        }else if(e.key == "Enter") {
+            calculates();
+        }else {
+            screen.textContent += `${e.key}`;
+        }
+      
+
+});
+
 
 
 
@@ -38,7 +59,9 @@ operator.forEach(function(op) {
     });
 });
 
-equals.addEventListener("click", function calculates() {
+equals.onclick = function() {calculates()};
+
+function calculates() {
     let items = screen.innerHTML;
     
     errorMessage.innerHTML = "";
@@ -70,26 +93,28 @@ equals.addEventListener("click", function calculates() {
                     showError = " extra '.' ";
                     break;
               }
-              // code block
-        
        
         
         errorMessage.innerHTML = showError;
       }
-});
+}
 
 
-clear.addEventListener("click", function clearIt() {
+clear.addEventListener("click", function clearsIt() {
     screen.innerHTML = "";
     errorMessage.innerHTML = "";
     currentExp = "";
 });
 
-backspace.addEventListener("click", function clearIt() {
-    let oldItems = screen.innerHTML;
-    const editedItems = oldItems.slice(0, -1)
-    screen.innerHTML = editedItems;
+back.addEventListener("click", function clearIt() {
+    
+        let oldItems = screen.innerHTML;
+        const editedItems = oldItems.slice(0, -1)
+        screen.innerHTML = editedItems;
+    
 });
+ 
+
 
 
 parenthasisLeft.addEventListener("click", function puntuateLeft() {
