@@ -1,9 +1,14 @@
 
+html {
+    background-color: rgba(0, 24, 18, 0.938);;
+}
 body {
     display: flex;
+    align-self: center;
     justify-content: center;
     flex-direction: column;
     font-family: 'Open Sans', sans-serif;
+    
 }
 
 #calculator-div {
@@ -117,6 +122,10 @@ footer {
 
 #github-logo-link img{
     height: 40px;
+}
+
+p {
+    color:rgb(235, 235, 235);
 }
 
 @media only screen and (max-width: 480px) {
