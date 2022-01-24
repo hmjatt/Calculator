@@ -17,15 +17,27 @@ body {
     padding-top: 20px;
 }
 
-#screen-div {
-    overflow: auto;
+#screen-div-container{
     display: flex;
-    flex-wrap: wrap;
     align-self: center;
-    background-color: rgb(32, 32, 22);
-    border-radius: 34px;
+    justify-content: center;
+    flex-direction: column;
     height: 200px;
     width: 460px;
+    background-color: rgb(32, 32, 22);
+    border-radius: 34px;
+}
+
+#screen-div {
+    overflow: auto;
+    padding: 10px;
+
+}
+
+#error-msg-div{
+    font-size: 24px;
+    padding: 10px;
+    color:rgb(255, 127, 77);
 }
 
 #buttons-div-container {
