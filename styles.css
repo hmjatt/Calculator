@@ -2,10 +2,13 @@
 body {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     font-family: 'Open Sans', sans-serif;
 }
 
 #calculator-div {
+    justify-content: center;
+    align-self: center;
     display: flex;
     flex-direction: column;
     background-color: rgb(10, 10, 10);
@@ -44,6 +47,7 @@ body {
 
     display: flex;
     justify-content: center;
+    align-self: center;
     padding-top: 25px;
 }
 
@@ -59,11 +63,91 @@ body {
 button {
     font-family: 'Open Sans', sans-serif;
     align-self: center;
-    font-size: 42px;
+    justify-self: center;
+    font-size: 34px;
     font-weight: 500;
     border: none;
-    margin-left: 0.5em;
     width: 80px;
     height: 80px;
     border-radius: 90px;
+    transition-duration: 0.4s;
+}
+
+button:hover {background-color: #0f0f0f}
+
+
+button:active {
+  background-color: #0f0f0f;
+  box-shadow: 0 5px #000000;
+  transform: translateY(4px);
+}
+.num1 {
+    background-color: rgb(44, 44, 44);
+    color: rgb(235, 235, 235);
+}
+
+.num2, .operator {
+    background-color: rgb(156, 145, 108);
+    color: rgb(0, 0, 0);
+}
+
+#clear {
+    background-color: rgba(195, 241, 183, 0.849);
+    color: rgb(0, 0, 0);
+}
+
+#equals{
+    background-color: rgb(216, 197, 127);
+    color: rgb(0, 0, 0);
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+    text-align: center;
+    
+}
+
+
+#github-logo-link {
+    align-self: center;
+}
+
+#github-logo-link img{
+    height: 40px;
+}
+
+@media only screen and (max-width: 480px) {
+
+    html {
+        display: flex;
+        justify-content: center;
+    }
+    body{
+        width: 375px;
+        margin: 0;
+    }
+    #calculator-div{
+        width: 375px;
+        height: 647px;
+    }
+
+    #screen-div-container {
+        width: 365px;
+    }
+
+    #buttons-div-container{
+        width: 365px;
+    }
+
+    #buttons-div {
+        width: 365px;
+    }
+
+    button {
+        width: 75px;
+        height: 75px;
+    }
 }

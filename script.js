@@ -1,4 +1,5 @@
 const numbers = document.querySelectorAll(".num");
+const buttons = document.querySelectorAll("button");
 const screen = document.getElementById("screen-div");
 const operator = document.querySelectorAll(".operator");
 const equals = document.getElementById("equals");
