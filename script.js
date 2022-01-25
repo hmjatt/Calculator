@@ -20,7 +20,7 @@ numbers.forEach(function(elem) {
       
         let ele = elem.innerHTML;
         //convert input to Array
-        screen.innerHTML += ele;
+        screen.value += ele;
         
         
     });
@@ -34,9 +34,9 @@ document.addEventListener('keyup', function enterDigit(e) {
 
     
         if(e.key == "Backspace") {
-            let oldItems = screen.innerHTML;
+            let oldItems = screen.value;
             const editedItems = oldItems.slice(0, -1)
-            screen.innerHTML = editedItems;
+            screen.value = editedItems;
         }else if(e.key == "Shift"||e.key == "CapsLock"||e.key == "Control") {
             e.preventDefault();
         }else if(e.key == "Enter") {
@@ -55,7 +55,7 @@ operator.forEach(function(op) {
     op.addEventListener("click", function evaluate() {
 
         let opr = op.innerHTML;
-        screen.innerHTML += opr;
+        screen.value += opr;
    
     });
 });
@@ -63,22 +63,24 @@ operator.forEach(function(op) {
 equals.onclick = function() {calculates()};
 
 function calculates() {
-    let items = screen.innerHTML;
-    
-    errorMessage.innerHTML = "";
+    let items = screen.value;
+    console.log(typeof(items));
+    errorMessage.style.color = "rgb(196, 196, 196)";
     let chkError;
+    let showError = screen.value;
+    errorMessage.innerHTML = showError;
     
     try {
         let currentExp = math.evaluate(items);
-        screen.innerHTML = currentExp;
+        screen.value = currentExp;
       }
       catch(err) {
-        let showError;
+        
         chkError = err.message;
         const arr = chkError.split(" ");
         const editedArr = arr.slice(0, 3);
         let editedStr = editedArr.join(" ");
-        
+        errorMessage.style.color = "rgb(255, 127, 77)";
         
             switch(editedStr) {
                 case "Parenthesis ) expected":
@@ -93,8 +95,9 @@ function calculates() {
                 case "Unexpected operator .":
                     showError = " extra '.' ";
                     break;
+            
               }
-       
+            
         
         errorMessage.innerHTML = showError;
       }
@@ -102,16 +105,16 @@ function calculates() {
 
 
 clear.addEventListener("click", function clearsIt() {
-    screen.innerHTML = "";
+    screen.value = "";
     errorMessage.innerHTML = "";
     currentExp = "";
 });
 
 back.addEventListener("click", function clearIt() {
     
-        let oldItems = screen.innerHTML;
+        let oldItems = screen.value;
         const editedItems = oldItems.slice(0, -1)
-        screen.innerHTML = editedItems;
+        screen.value = editedItems;
     
 });
  
@@ -119,23 +122,23 @@ back.addEventListener("click", function clearIt() {
 
 
 parenthasisLeft.addEventListener("click", function puntuateLeft() {
-    let pLeftItems = screen.innerHTML;
+    let pLeftItems = screen.value;
 
     let addParLeft = (`(${pLeftItems}`);
         
-    screen.innerHTML = addParLeft;
+    screen.value = addParLeft;
 });
 
 parenthasisRight.addEventListener("click", function puntuateRight() {
-    let pRightItems = screen.innerHTML;
+    let pRightItems = screen.value;
 
     let addParRight = (`${pRightItems})`);
         
-    screen.innerHTML = addParRight;
+    screen.value = addParRight;
 });
 
 dot.addEventListener("click", function puntuate() {
-    let prvItems = screen.innerHTML;
+    let prvItems = screen.value;
     let addDot = (`${prvItems}.`)
-    screen.innerHTML = addDot;
+    screen.value = addDot;
 });

@@ -1,6 +1,6 @@
 
 html {
-    background-color: rgba(0, 24, 18, 0.938);;
+    background-color: rgba(223, 217, 207, 0.938);;
 }
 body {
     display: flex;
@@ -17,8 +17,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: rgb(10, 10, 10);
-    color: rgb(235, 235, 235);
-    font-size: 56px;
+    
     border-radius: 34px;
     height: 700px;
     width: 500px;
@@ -34,18 +33,34 @@ body {
     width: 460px;
     background-color: rgb(32, 32, 22);
     border-radius: 34px;
+    text-align: right;
 }
+
 
 #screen-div {
-    overflow: auto;
     padding: 10px;
-
+    font-size: 72px;
+    text-align: right;
+    width: 430px;
+    padding: 0;
+    background-color: rgb(32, 32, 22);
+    border: none;
+    color: rgb(255, 223, 181);
+    font-family: 'Open Sans', sans-serif;
 }
 
+#screen-div:focus {
+    outline: none;
+}
+
+
+
+
 #error-msg-div{
-    font-size: 24px;
+    overflow:auto;
+    font-size: 22px;
     padding: 10px;
-    color:rgb(255, 127, 77);
+    color:rgb(196, 196, 196);
 }
 
 #buttons-div-container {
@@ -69,7 +84,7 @@ button {
     font-family: 'Open Sans', sans-serif;
     align-self: center;
     justify-self: center;
-    font-size: 34px;
+    font-size: 28px;
     font-weight: 500;
     border: none;
     width: 80px;
@@ -92,18 +107,47 @@ button:active {
 }
 
 .num2, .operator {
-    background-color: rgb(156, 145, 108);
+    background-color: rgb(219, 202, 144);
     color: rgb(0, 0, 0);
+    transition-duration: 0.4s;
 }
+
+.num2:hover, .operator:hover {background-color: rgb(255, 227, 133)}
+
+.num2:active, .operator:active {
+    background-color: rgb(255, 227, 133);
+    box-shadow: 0 5px #000000;
+    transform: translateY(4px);
+}
+
 
 #clear {
     background-color: rgba(195, 241, 183, 0.849);
     color: rgb(0, 0, 0);
+    transition-duration: 0.4s;
+}
+
+#clear:hover {background-color: rgba(174, 255, 154, 0.993)}
+
+
+#clear:active {
+  background-color: rgba(174, 255, 154, 0.993);
+  box-shadow: 0 5px #000000;
+  transform: translateY(4px);
 }
 
 #equals{
-    background-color: rgb(216, 197, 127);
+    background-color: rgb(255, 208, 147);
     color: rgb(0, 0, 0);
+    transition-duration: 0.4s;
+}
+#equals:hover {background-color: rgb(240, 172, 83)}
+
+
+#equals:active {
+  background-color: rgb(240, 172, 83);
+  box-shadow: 0 5px #000000;
+  transform: translateY(4px);
 }
 
 footer {
@@ -125,7 +169,7 @@ footer {
 }
 
 p {
-    color:rgb(235, 235, 235);
+    font-size: 20px;
 }
 
 @media only screen and (max-width: 480px) {
@@ -144,19 +188,29 @@ p {
     }
 
     #screen-div-container {
+        margin-top: -10px;
+        margin-bottom: 20px;
         width: 365px;
+    }
+
+    #screen-div {
+        border-radius: 50px;
+        width:345px;
+        
     }
 
     #buttons-div-container{
         width: 365px;
+        padding-top: 0;
     }
 
     #buttons-div {
         width: 365px;
+        height: 410px;
     }
 
     button {
-        width: 75px;
-        height: 75px;
+        width: 70px;
+        height: 70px;
     }
 }
