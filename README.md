@@ -3,7 +3,7 @@
 
 [Live Demo](https://hmjatt.github.io/Calculator/)
 
-Calculator made with JavaScript. Let's crunch some numbers. Have Fun!!!. Please feel free to give me reviews at my [Twitter](https://twitter.com/hmjatt/)
+Calculator made with JavaScript. This project uses [math.js](https://mathjs.org/) library. Let's crunch some numbers. Have Fun!!!. Please feel free to give me reviews at my [Twitter](https://twitter.com/hmjatt/)
 
 ### Technologies Used 
 
