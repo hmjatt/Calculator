@@ -80,6 +80,12 @@ body {
     width: 480px;
 }
 
+.fxn {
+    width: 70px;
+    height: 30px;
+    font-size: 18px;
+}
+
 button {
     font-family: 'Open Sans', sans-serif;
     align-self: center;
@@ -210,7 +216,7 @@ p {
     }
 
     button {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
     }
 }
