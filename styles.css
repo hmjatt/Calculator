@@ -86,6 +86,47 @@ body {
     font-size: 18px;
 }
 
+.more {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 30px;
+    padding-top: 20px;
+}
+
+.more-btn {
+    width: 70px;
+    height: 30px;
+    font-size: 18px;
+
+}
+
+.more-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.more-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.more-content a:hover {
+    background-color: #ddd;
+    border-radius: 20px;
+}
+
+.more:hover .more-content {display: block;}
+
+.more:hover .more-btn {background-color: #3e8e41;}
+
 button {
     font-family: 'Open Sans', sans-serif;
     align-self: center;
@@ -93,8 +134,8 @@ button {
     font-size: 28px;
     font-weight: 500;
     border: none;
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     border-radius: 90px;
     transition-duration: 0.4s;
 }
