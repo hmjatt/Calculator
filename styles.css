@@ -68,16 +68,24 @@ body {
     display: flex;
     justify-content: center;
     align-self: center;
-    padding-top: 25px;
+    margin-top: -20px;
 }
 
 #buttons-div {
     border-radius: 34px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    height: 456px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    height: 506px;
     width: 480px;
+}
+
+.functions{
+    width: 70px;
+    height: 40px;
+    padding-top: 30px;
+    align-self: center;
+    justify-self: center;
 }
 
 .fxn {
@@ -85,8 +93,21 @@ body {
     height: 40px;
     font-size: 26px;
     font-weight: 400;
+    transition-duration: 0.4s;
 }
 
+.fxn:hover {
+    background-color: #0f0f0f;
+    color: rgb(231, 231, 231);
+}
+
+
+.fxn:active {
+  background-color: #0f0f0f;
+  color: rgb(231, 231, 231);
+  box-shadow: 0 5px #cecece;
+  transform: translateY(4px);
+}
 
 
 #sqrt {
@@ -94,19 +115,35 @@ body {
     font-weight: 800;
 }
 
+
 .more {
     position: relative;
     display: inline-block;
     width: 70px;
-    height: 30px;
-    padding-top: 20px;
+    height: 40px;
+    padding-top: 35px;
+    padding-left: 25px;
 }
 
 .more-btn {
     width: 70px;
-    height: 30px;
+    height: 40px;
     font-size: 18px;
+    transition-duration: 0.4s;
+}
 
+
+.more-btn:hover {
+    background-color: #0f0f0f;
+    color: rgb(231, 231, 231);
+}
+
+
+.more-btn:active {
+  background-color: #0f0f0f;
+  color: rgb(231, 231, 231);
+  box-shadow: 0 5px #cecece;
+  transform: translateY(4px);
 }
 
 .more-content {
@@ -133,7 +170,7 @@ body {
 
 .more:hover .more-content {display: block;}
 
-.more:hover .more-btn {background-color: #3e8e41;}
+.more:hover .more-btn {background-color: #0f0f0f;}
 
 button {
     font-family: 'Open Sans', sans-serif;
@@ -153,7 +190,7 @@ button:hover {background-color: #0f0f0f}
 
 button:active {
   background-color: #0f0f0f;
-  box-shadow: 0 5px #000000;
+  box-shadow: 0 4px #494949;
   transform: translateY(4px);
 }
 .num1 {
@@ -171,7 +208,7 @@ button:active {
 
 .num2:active, .operator:active {
     background-color: rgb(255, 227, 133);
-    box-shadow: 0 5px #000000;
+    box-shadow: 0 4px #494949;
     transform: translateY(4px);
 }
 
@@ -187,7 +224,7 @@ button:active {
 
 #clear:active {
   background-color: rgba(174, 255, 154, 0.993);
-  box-shadow: 0 5px #000000;
+  box-shadow: 0 4px rgba(195, 241, 183, 0.849);
   transform: translateY(4px);
 }
 
@@ -201,7 +238,7 @@ button:active {
 
 #equals:active {
   background-color: rgb(240, 172, 83);
-  box-shadow: 0 5px #000000;
+  box-shadow: 0 3px rgb(255, 208, 147);
   transform: translateY(4px);
 }
 
