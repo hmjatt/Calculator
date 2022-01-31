@@ -40,7 +40,6 @@
                     <button class="fxn" value="pi" id="pie">&pi;</button>
 
                 </div>
-                
                 <div class="functions">                
                     <button class="fxn" value="^" id="squaring">x&sup2;</button>
                     
@@ -53,20 +52,25 @@
                 
 
                 <div class="more">
-                    <button class="more-btn">More</button>
-                    <div class="more-content">
 
-                        <a href="#">RAD</a>
-                        <a href="#">sin</a>
-                        <a href="#">cos</a>
-                        <a href="#">tan</a>
-
-                        <a href="#">INV</a>
-                        <a href="#">e</a>
-                        <a href="#">ln</a>
-                        <a href="#">log</a>
-                        
-                    </div>
+                    <select class="more-fxn" name="fashion">
+                        <option value="" disabled selected>More</option>
+                        <optgroup label="Angles">
+                            <option value="rad(">RAD</option>
+                            <option value="deg(">DEG</option>
+                            <option value="grad(">GRAD</option>
+                        </optgroup>
+                        <optgroup label="Trigonometry">
+                            <option value="sin(">sin</option>
+                            <option value="cos(">Cos</option>
+                            <option value="tan(">tan</option>
+                        </optgroup>
+                        <optgroup label="Others">
+                            <option value="ln(">Natural Log</option>
+                            <option value="e(">Euler's Constant</option>
+                            <option value="log(">log</option>
+                        </optgroup>
+                    </select>
                 </div>
 
                 

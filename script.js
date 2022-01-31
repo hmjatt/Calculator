@@ -2,6 +2,7 @@ const numbers = document.querySelectorAll(".num");
 const buttons = document.querySelectorAll("button");
 const sqrt = document.getElementById("sqrt");
 const functionKeys = document.querySelectorAll(".fxn");
+const moreFunctionKeys = document.querySelectorAll(".more-fxn");
 const screen = document.getElementById("screen-div");
 const operator = document.querySelectorAll(".operator");
 const equals = document.getElementById("equals");
@@ -63,11 +64,15 @@ functionKeys.forEach(function(fxn) {
     });
 });
 
-// sqrt.addEventListener("click", function addSqrt() {
-//     let sqrtKey = sqrt.value;
-//         console.log(sq.value);
-//         screen.value += fxnKey;
-// });
+moreFunctionKeys.forEach(function(fxns) {
+    fxns.addEventListener("change", function addFxns() {
+
+        let moreFxnKey = fxns.value;
+        console.log(moreFxnKey);
+        screen.value += moreFxnKey;
+   
+    });
+});
 
 
 operator.forEach(function(op) {
