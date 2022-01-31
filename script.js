@@ -1,5 +1,7 @@
 const numbers = document.querySelectorAll(".num");
 const buttons = document.querySelectorAll("button");
+const sqrt = document.getElementById("sqrt");
+const functionKeys = document.querySelectorAll(".fxn");
 const screen = document.getElementById("screen-div");
 const operator = document.querySelectorAll(".operator");
 const equals = document.getElementById("equals");
@@ -51,14 +53,32 @@ document.addEventListener('keyup', function enterDigit(e) {
 
 
 
+functionKeys.forEach(function(fxn) {
+    fxn.addEventListener("click", function addFxn() {
+
+        let fxnKey = fxn.value;
+        console.log(fxn.value);
+        screen.value += fxnKey;
+   
+    });
+});
+
+// sqrt.addEventListener("click", function addSqrt() {
+//     let sqrtKey = sqrt.value;
+//         console.log(sq.value);
+//         screen.value += fxnKey;
+// });
+
+
 operator.forEach(function(op) {
-    op.addEventListener("click", function evaluate() {
+    op.addEventListener("click", function addOperators() {
 
         let opr = op.innerHTML;
         screen.value += opr;
    
     });
 });
+
 
 equals.onclick = function() {calculates()};
 
@@ -81,7 +101,7 @@ function calculates() {
         const editedArr = arr.slice(0, 3);
         let editedStr = editedArr.join(" ");
         errorMessage.style.color = "rgb(255, 127, 77)";
-        
+
             switch(editedStr) {
                 case "Parenthesis ) expected":
                   showError = " missing ')' ";
@@ -95,7 +115,9 @@ function calculates() {
                 case "Unexpected operator .":
                     showError = " extra '.' ";
                     break;
-            
+                default:
+                    showError = " try sqrt(x) ";
+                    break;
               }
             
         
@@ -137,7 +159,7 @@ parenthasisRight.addEventListener("click", function puntuateRight() {
     screen.value = addParRight;
 });
 
-dot.addEventListener("click", function puntuate() {
+dot.addEventListener("click", function puntuateDot() {
     let prvItems = screen.value;
     let addDot = (`${prvItems}.`)
     screen.value = addDot;

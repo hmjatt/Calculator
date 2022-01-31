@@ -82,8 +82,16 @@ body {
 
 .fxn {
     width: 70px;
-    height: 30px;
-    font-size: 18px;
+    height: 40px;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+
+
+#sqrt {
+    font-size: 32px;
+    font-weight: 800;
 }
 
 .more {
