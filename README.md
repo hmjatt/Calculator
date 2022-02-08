@@ -3,6 +3,8 @@
 
 [Live Demo](https://hmjatt.github.io/Calculator/)
 
+![This is an image](https://raw.githubusercontent.com/hmjatt/Calculator/main/images/calculator-screenshot.jpg)
+
 Calculator made with JavaScript. This project uses [math.js](https://mathjs.org/) library. Let's crunch some numbers. Have Fun!!!. Please feel free to give me reviews at my [Twitter](https://twitter.com/hmjatt/)
 
 ### Technologies Used 
