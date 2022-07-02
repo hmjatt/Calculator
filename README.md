@@ -1,7 +1,7 @@
 # Calculator
 
 
-[Live Demo](https://hmjatt.github.io/Calculator/)
+## [Live Demo](https://hmjatt.github.io/Calculator/)
 
 ![This is an image](https://raw.githubusercontent.com/hmjatt/Calculator/main/images/calculator-screenshot.jpg)
 
