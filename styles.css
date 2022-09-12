@@ -121,7 +121,10 @@ body {
     margin-left: 25px;
 }
 
-
+.more > select:focus{
+    background-color: #0f0f0f;
+    color: white;
+}
 
 select {
     width: 70px;
